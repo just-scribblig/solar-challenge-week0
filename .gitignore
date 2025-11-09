@@ -1,2 +1,7 @@
 .venv/
+<<<<<<< HEAD
 data/
+=======
+data/
+notebook/
+>>>>>>> main
