@@ -2,7 +2,7 @@ name: CI Workflow
 
 on:
   push:
-    branches: [ main, setup-task ]
+    branches: [ main, setup-task, benin-eda, togo-eda, sierraleone-eda ]
   pull_request:
     branches: [ main ]
 
