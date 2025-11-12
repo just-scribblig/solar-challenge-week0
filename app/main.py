@@ -13,13 +13,13 @@ st.markdown("Compare solar metrics (GHI, DNI, DHI) across Benin, Togo, and Sierr
 @st.cache_data
 def load_data():
     countries = {}
-    for name in ["benin", "togo", "sierraleone"]:
+    for name in ["BENIN", "TOGO", "SIERRALEONE"]:
         try:
-            df = pd.read_csv(f"data/{name}_clean.csv")
+            df = pd.read_csv(f"../data/{name}_EDA_RESULT.csv")
             df["country"] = name.capitalize()
             countries[name] = df
         except FileNotFoundError:
-            st.warning(f"{name}_clean.csv not found.")
+            st.warning(f"{name}_EDA_RESULT.csv not found.")
     return pd.concat(countries.values(), ignore_index=True)
 
 df = load_data()
